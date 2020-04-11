@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <div class="row" *ngFor="let x of dataModel">
+        <div class="container panel panel-primary" style="overflow: hidden; border-radius: 5px; width: 800px;">
+            <div class="row panel-heading" style="height: 50px;">
+                <div class="col-lg-8">
+                    <h4>{{ x.product }}</h4>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="img-fluid col-md-12" src="{{ x.productImage | http: 'https' }}" />
+                </div>
+                <div class="col-md-7">
+                    <div class="container">
+                     <div class="row">
+                          <div class="col-md-12">
+                         <div class="container">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                        <h5>Product Code : {{ x.code }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                            <div class="container">
+                            <div class="row">
+                            <div class="col-md-12">
+                        <h5>Star Rating &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{{ x.rating }}  <i class="fa fa-star" aria-hidden="true"></i> </h5>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                            <div class="row">
+                            <div class="col-md-4">
+                                <div class="container">
+                                <div class="row">
+                                <div class="col-md-12">
+                            <h5>Available till &nbsp;&nbsp;&nbsp;: {{ x.available }}</h5>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-4">
+                                <div class="container">
+                                <div class="row">
+                                <div class="col-md-12">
+                            <h5>Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <i class="fa fa-inr" aria-hidden="true"></i>{{ x.price }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            <br />
+    <div class="row" style="background-color:#e3e1e1; padding: 10px 2px;">
+        <div class="col-md-2">
+        <button type="button" class="btn btn-primary col-md-12" routerLink="/ProductList">Back</button>
+    </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

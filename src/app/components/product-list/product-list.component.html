@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="container">    
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Product List</div>
+                        <div class="row">
+                          <div class="col-md-2"><label>Filter By:</label></div>
+                          <div class="col-md-4">
+                            <input
+                              type="text" class="form-control" name="Search" placeholder="Search Here...." [(ngModel)]="inputKey.keyword" 
+                              #search="ngModel"
+                              (keyup)="save(search.value)"
+                            />
+                          </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                          <div class="col-md-2 text-left">Filter by:</div>
+                          <div class="col-md-2 text-left">{{ inputKey.keyword }}</div>
+                        </div>
+                        <br />
+                        <table class="table table-responsive-md table-striped table-inverse border">
+                          <thead class="thead-inverse">
+                            <tr>
+                              <th>
+                                <button type="button" name="" id="" class="btn btn-primary"
+                                  btn-lg
+                                  btn-block
+                                  (click)="onClick()">
+                                  {{ flag ? "Hide" : "Show" }} Image</button>
+                              </th>
+                    <th>Product</th>
+                    <th>Code</th>
+                    <th>Available</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                        </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let dataelement of filterdata">
+                              <td *ngIf="flag">
+                                <img
+                                  class="img col-lg-12"
+                                  src="{{ dataelement.productImage | http: 'https' }}"
+                                />
+                              </td>
+                              <td *ngIf="!flag"></td>
+                              <td>
+                                <a routerLink="/Product/{{ dataelement.productId }}">{{
+                                  dataelement.product
+                                }}</a>
+                              </td>
+                              <td>{{ dataelement.code }}</td>
+                              <td>{{ dataelement.available }}</td>
+                              <td><i class="fa fa-inr" aria-hidden="true"></i>{{ dataelement.price }}</td>
+                              <td><app-star [starcounter]="dataelement.rating"></app-star></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+    </body>
+</html>  
+

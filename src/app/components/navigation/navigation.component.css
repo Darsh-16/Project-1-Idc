@@ -1,0 +1,60 @@
+div.navbar{
+    border-color:grey;
+}
+
+
+ul.nav li a {
+   color:black!important;
+   background-color: lightgray!important;
+   padding: auto;
+   margin: 1px;
+   border-radius: 10px;
+} 
+
+ul.nav li text{
+   padding:10px;
+}
+
+/* div.container{
+   border:3px solid rgb(24, 91, 190);
+   height:336px;
+   margin-top:25px;
+   margin-left: 7%;
+   border-radius: 10px;
+
+}
+
+div.container div.welcome{
+
+   height: 40px;
+   width:100%;
+   background-color: rgb(24, 91, 190);
+   border-radius: 6px 6px 0px 0px;
+}
+
+div.container div.welcome h4{
+   color: white;
+   padding-left: 5px;
+   margin-left:10px;
+}
+
+img{
+   padding:10px;
+}
+
+div.container div.footer{
+
+   height: 40px;
+   width:100%;
+   background-color:silver;
+   border-radius: 0px 0px 8px 8px ;
+}
+
+div.container div.footer h4{
+   color: black;
+   padding-left: 5px;
+   margin-left:10px;
+} */
+
+
+
